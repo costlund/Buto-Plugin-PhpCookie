@@ -16,6 +16,11 @@ $cookie = new PluginPhpCookie();
 $cookie->set('_name_of_cookie_', '_a_value_');
 ```
 
+### get
+```
+$cookie->get('_name_of_cookie_');
+```
+
 ### del
 ```
 $cookie->del('_name_of_cookie_');
