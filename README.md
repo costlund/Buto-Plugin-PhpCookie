@@ -32,6 +32,6 @@ Default values.
 $cookie->$days = 30;
 $cookie->$path = "/";
 $cookie->$domain = "";
-$cookie->$secure = true;
+$cookie->$secure = true; (false if not https)
 $cookie->$httponly = false;
 ```

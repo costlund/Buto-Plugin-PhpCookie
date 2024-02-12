@@ -6,6 +6,15 @@ class PluginPhpCookie{
   public $secure = true;
   public $httponly = false;
   public function set($name, $value){
+    /**
+     * secure
+     */
+    if(wfServer::calcProtocol()=='http'){
+      $this->secure = false;
+    }
+    /**
+     * setcookie
+     */
     setcookie($name, $value, strtotime( '+'.$this->days.' days' ), $this->path, $this->domain, $this->secure, $this->httponly);
     return null;
   }
